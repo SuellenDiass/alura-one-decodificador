@@ -1,0 +1,582 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  :root {
+    /* Colors */
+    --white: #ffffff;
+    --dark-blue-dark-blue-100: #609ed4;
+    --dark-blue-dark-blue-200: #356ea9;
+    --dark-blue-dark-blue-300: #0a3871;
+    --dark-blue-dark-blue-400: #072b61;
+    --dark-blue-dark-blue-500: #052051;
+    --light-blue-light-blue-100: #f3f5fc;
+    --light-blue-light-blue-200: #eff1fa;
+    --light-blue-light-blue-300: #e9ecf8;
+    --light-blue-light-blue-400: #aab2d5;
+    --light-blue-light-blue-500: #757fb2;
+    --gray-gray-100: #ced4da;
+    --gray-gray-200: #adb5bd;
+    --gray-gray-300: #868e96;
+    --gray-gray-400: #495057;
+    --gray-gray-500: #343a40;
+  
+    /* Fonts */
+    /* eFEITO SOMBRA */
+    --shadow-box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+  }
+  
+  .principal_page {
+    background: url(/images/giphy.gif) no-repeat;
+    background-size: cover;/* deixa a imagem como fundo sem distorção */
+    background-position: center;
+    
+    height: 657px;
+    position: relative;
+    overflow: hidden;/* controla conteudo para caber na area */
+    transition: 0.5s; /* forma de controlar a velocidade de uma animação  */
+  }
+  
+  h1{
+    color: #052051;
+  }
+  .cabecalho{
+    display: flex;
+    align-items: center;
+    background: var(--dark-blue-dark-blue-100);
+  }
+  #label__resultado{
+
+    background: rgba(0, 0, 0, 0.2);/* transparencia */
+    backdrop-filter: blur(20px);/* criar uma sensação de desfoque no conteúdo que está por trás desse elemento */
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255,  255, .1);
+    border-radius: 10px;
+
+    color: var(--gray-gray-100);
+    resize: none; /* não redimenciona  o textarea */
+
+    width: 395px;
+    height: 219px;
+  }
+  .container__resultado {
+  
+    border: 3px solid rgba(255, 255,  255, .3);
+    border-radius: 32px;
+    width: 400px;
+    height: 550px;
+    position: absolute;
+    left: 1000px;
+    top: 40px;
+    box-shadow: var(--shadow-box-shadow, 0px 24px 32px -8px rgba(0, 0, 0, 0.08));
+    
+  }
+  
+  .container__resultado img {
+    width: 44%; /* ajusta a largura da imagem conforme necessário */
+    height: auto; /* mantém a proporção da imagem */
+    display: flex;
+    position: relative;
+    left: 110px;
+  }
+  
+  .digite__seu__texto {
+    color: var(--gray-gray-100);
+    text-align: left;
+    font-family: "Inter-Regular", sans-serif;
+    font-size: 32px;
+    line-height: 150%;
+    font-weight: 400;
+    position: absolute;
+    left: 100px;
+    top: 29px;
+    width: 680px;
+    /* -webkit-text-stroke: 1px #000000; */
+  }
+  .titulo{
+    display: flex;
+    align-items: center;
+    left: 50px;
+  }
+  #texto__entrada{
+    margin-top: -38px;
+    background: rgba(0, 0, 0, 0.2);/* transparencia */
+    backdrop-filter: blur(20px);/* criar uma sensação de desfoque no conteúdo que está por trás desse elemento */
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255,  255, .1);
+    border-radius: 10px;
+    color: var(--gray-gray-100);
+    width: 668px;
+    height: 348px;
+  
+    resize: none;
+  }
+  .container__botoes {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 680px;
+    position: absolute;
+    left: 2px;
+    top: 467px;
+  }
+  /* botão criptografar */
+  .botao__criptografar {
+    background: var(--dark-blue-dark-blue-300, #0a3871);
+    border-radius: 24px;
+    border-color: var(--gray-gray-100);
+    border-width: 1px;
+    padding: 13px;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    width: 317px;
+    position: relative;
+  }
+  .botao__criptografar:hover {
+    cursor: pointer;
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, .2), 0 0 20px rgba(255, 255,  255, .1);
+    background-color: var(--dark-blue-dark-blue-100);
+    transform: translateY(6px);/* efeito ao clicar */
+    }
+    /* texto botão criptografar */
+  .texto__criptografar {
+    text-align: center;
+    font-family: "Inter-Regular", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    position: relative;
+    flex: 1;
+    color:var(--gray-gray-100)
+  }
+  .texto__criptografar:hover{
+    color: var(--dark-blue-dark-blue-300);
+  }
+  /* botao descriptografar */
+  .botao__descriptografar {
+    background: var(--gray-gray-200);
+    border-radius: 24px;
+    border-style: solid;
+    border-color: var(--dark-blue-dark-blue-300, #0a3871);
+    border-width: 1px;
+    padding: 13px;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    width: 317px;
+    position: relative;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  }
+  .botao__descriptografar:hover{
+    cursor: pointer;
+    background-color: var(--dark-blue-dark-blue-100);
+    transform: translateY(6px);/* efeito ao clicar */
+  }
+  
+  /* texto descriptografar */
+  .texto__descriptografar {
+    color: var(--dark-blue-dark-blue-300, #0a3871);
+    text-align: center;
+    font-family: "Inter-Regular", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    position: relative;
+    flex: 1; 
+  }
+  .texto__descriptografar:hover{
+    cursor: pointer;
+    color:var(--dark-blue-dark-blue-500);
+  }
+  /* botão copiar */
+  .botao__copiar{
+    background: #d8dfe8;
+    border-radius: 24px;
+    border-style: solid;
+    border-color: var(--dark-blue-dark-blue-300, #0a3871);
+    border-width: 1px;
+    padding: 11px;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: flex-end;/*  */
+    justify-content: flex-start;
+    flex-shrink: 0;
+    width: 310px;
+    position: relative;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  
+    left: 50px;
+    margin-top: 40px;
+  
+  }
+  .botao__copiar:hover{
+    cursor: pointer;
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, .2), 0 0 20px rgba(255, 255,  255, .1);
+    background-color: var(--dark-blue-dark-blue-100);
+    transform: translateY(4px);/* efeito ao clicar */
+  
+  }
+  .texto__copiarTexto{
+    color: var(--dark-blue-dark-blue-300, #0a3871);
+    text-align: center;
+    font-family: "Inter-Regular", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    position: relative;
+    flex: 1;  
+  }
+  .texto__copiarTexto:hover{
+    cursor: pointer;
+    box-shadow:inset 0 0 10px rgba(255, 255, 255, .2), 0 0 20px rgba(255, 255,  255, .1);
+    color:var(--dark-blue-dark-blue-500);
+  
+  }
+  /* Adicionando estilo no alert */
+  .alerta {
+    display: none;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px;
+    color: var(--dark-blue-dark-blue-500);
+    border: 1px solid #072b61;
+    border-radius: 5px;
+    text-align: center;
+    width: 300px;
+    z-index: 1000;
+  }
+  
+  /* icone */
+  .container__icone__condicao {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+    justify-content: flex-start;
+    position: absolute;
+    left: 0px;
+    top: 430px;
+     
+  }
+  
+  .icon__exclamacao {
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+    position: relative;
+    /* overflow: hidden; */
+    top: -20px;
+   
+  } 
+  .condicao__letra__minuscula {
+    color: var(--gray-gray-100);
+    text-align: left;
+    font-family: "Inter-Regular", sans-serif;
+    font-size: 12px;
+    line-height: 150%;
+    font-weight: 400;
+    opacity: 0.800000011920929;
+    position: relative;
+  }
+  
+  /* container resultado */
+  .textarea__resultado {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    /* position: absolute; */
+    left: 1010px;
+    top: 291px;
+  }
+  .texto__resultado{
+    font-size: 18px;
+    /* margin-top: auto; */
+    margin-top: 10px;
+    color: var(--gray-gray-100);
+  }
+  .text__area__ajustado{
+    top: 130px;
+  }
+  .nenhuma__mensagem__encontrada {
+    color: var(--gray-gray-100);
+    text-align: center;
+    font-family: "Inter-Bold", sans-serif;
+    font-size: 15px;
+    line-height: 120%;
+    font-weight: 700;
+    /* position: absolute; */
+    left: 765px;
+    top: 231px;
+  }
+  .bi-exclamation-circle-fill{
+    color:var(--dark-blue-dark-blue-500);
+  }
+  
+  .roda__pe{
+   background-color: #052051;
+   color: var(--light-blue-light-blue-100);
+   display: flex;
+   align-items: center;
+   padding: 12px 16px;
+   border-radius: 2px 3px 9px 9px;
+   font-family: "Inter", sans-serif;
+   flex-direction: column;
+   margin-top: 0;
+  
+  }
+  /* Responsividade do projeto */
+  @media only screen and (max-width:768px){
+    .principal_page{
+      width: 764px;
+      height: 1245px;
+      display: flex;
+      flex-direction: column;
+    
+    }
+    .container__resultado{
+      width: 70%;
+      height: 44%;
+      left: 103px;
+      top: 596px;
+      margin-bottom: 20px;
+    }
+    .digite__seu__texto{
+      width: 100%;
+      left: 0;
+      top:10px;
+      margin-bottom: 20px;
+    }
+    #texto__entrada {
+      width: 100%;
+    }
+    .container__icone__condicao{
+      left: 63px;
+      margin-top: 10px;
+    }
+  
+    .container__botoes {
+      width: 100%;
+      left: 52px;
+      top: 473px;
+      margin-bottom: 20px;
+    }
+    .botao__copiar{
+      left: 100px;
+      margin-top: 33px;
+      padding: 13px;
+      width: 317px;
+    }
+  .textarea__resultado{
+    width: 100%;
+    left: 0;
+    top: 0;
+    margin-bottom: 20px;
+  }
+  #label__resultado{
+    width: 531px;
+    height: 291px;
+  }
+  .roda__pe{
+    position: relative;
+    margin-top: 0px;
+  }
+  }
+  
+  @media only screen and (max-width: 520px){
+
+    .principal_page{
+      width: 764px;
+      height: 1325px;
+      display: flex;
+      flex-direction: column;
+    
+    }
+    .cabecalho{
+      padding-left: 1rem;
+      width:  147vw;
+      text-align: center;
+      font-size: 1.5rem;
+    }
+    .image__logo{
+      max-height: 33px;
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+    .container__resultado{
+      width: 70%;
+      height: 44%;
+      left: 103px;
+      top: 631px;
+      margin-bottom: 20px;
+    }
+    .digite__seu__texto{
+      left: 110px;
+      top:10px;
+      margin-bottom: 20px;
+      border-radius: 34px;
+      width: 555px;
+      height: 435px;
+      position: absolute;
+      box-shadow: var(--shadow-box-shadow, 0px 24px 32px -8px rgba(0, 0, 0, 0.08));
+      
+    }
+    #texto__entrada {
+      width: 553px;
+      height: 291px;
+    }
+    .container__icone__condicao{
+      left: 103px;
+      margin-top: -21px;
+    }
+  
+    .container__botoes {
+      width: 100%;
+      left: 49px;
+      top: 435px;
+      margin-bottom: 20px;
+      flex-direction: column;
+    }
+    .botao__criptografar,
+    .botao__descriptografar,
+    .botao__copiar{
+
+      width: 445px;
+    }
+    .botao__copiar{
+      left: 62px;
+      margin-top: 33px;
+      padding: 28px;
+      width: 394px;
+    }
+  .textarea__resultado{
+    width: 100%;
+    left: 0;
+    top: 0;
+    margin-bottom: 20px;
+  } 
+  #label__resultado{
+    width: 531px;
+    height: 291px;
+  }
+  img{
+    width: 34%;
+
+  }
+  .roda__pe{
+    position: relative;
+    margin-top: 0px;
+    width: 763px;
+    
+  }
+  }
+  
+  @media only screen and (max-width: 320px){
+
+    .principal_page{
+      /* height: auto; */
+      width: 488px;
+      height: 1120px;
+      display: flex;
+      flex-direction: column;
+    }
+    .cabecalho{
+      padding-left: 1rem;
+      width: 486px;
+    }
+    .image__logo{
+      max-height: 33px;
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+    h1{
+      font-size: 1.1rem
+    }
+    #imagem__resultado{
+      display: none;
+    }
+    .container__resultado{
+      width: 99%;
+      height: 33%;
+      left: 3px;
+      top: 609px;
+      margin-bottom: 20px;
+    }
+    .titulo{
+      display: flex;
+      align-items: center;
+      left: 50px;
+      font-size: 1.8rem
+
+    }
+    .digite__seu__texto{
+      left: 0px;
+      top:10px;
+      margin-bottom: 20px;
+      border-radius: 34px;
+    
+      border-radius: 32px;
+      width: 317px;
+      height: 332px;
+      position: absolute;
+      box-shadow: var(--shadow-box-shadow, 0px 24px 32px -8px rgba(0, 0, 0, 0.08));
+      
+    }
+    #texto__entrada {
+      width: 479px;
+      height: 313px;
+    }
+    .container__icone__condicao{
+      left: 100px;
+      margin-top:-57px;
+    }
+  
+    .container__botoes {
+      width: 100%;
+      left: 91px;
+      top: 411px;
+      margin-bottom: 20px;
+      flex-direction: column;
+    }
+    .botao__criptografar,
+    .botao__descriptografar,
+    .botao__copiar{
+
+      width: 294px;
+    }
+    .botao__copiar{
+      left: 91px;
+      margin-top: 59px;
+      padding: 26px;
+      width: 276px;
+    }
+  .textarea__resultado{
+    width: 100%;
+    left: 0;
+    top: 0;
+    margin-bottom: 20px;
+  }
+  #label__resultado{
+    width: 479px;
+    height: 313px;
+  }
+  .roda__pe{
+    position: relative;
+    margin-top: 0px;
+    width: 488px; 
+  }
+  }
+  
+  
+    

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./font-awesome/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
+        <link rel="icon" href="/images/icon-pc-display-horizontal.svg">
+        <script src="https://code.responsivevoice.org/responsivevoice.js?key=NN5dLOfT"></script> 
+        <link rel="stylesheet" href="./styles/styles.css">
+        
+        <title>Decodificador de texto</title>
+    </head>
+
+    <body>
+        <header class="cabecalho">
+            <img class="image__logo" src="./images/Frame 6.png" alt="logo-alura">
+            
+            <h1>Decodificador de texto</h1>
+        </header>
+
+        <main class="principal_page">          
+
+            <section class="digite__seu__texto">
+                <label for="texto__entrada" class="titulo">Digite seu texto:</label><!-- label for tem que ser o mesmo id no textarea-->
+                <br>
+                <textarea id="texto__entrada" name="texto entrada" rows="5" cols="33" placeholder="Digite aqui"></textarea>
+
+                <div class="container__icone__condicao">
+                    <div class="icon__exclamacao"><!-- usei boostrap para o icone -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-circle-fill" viewBox="0 0 16 16">
+                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4m.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2"/>
+                        </svg>
+                    </div>
+                    <div class="condicao__letra__minuscula">
+                        Apenas letras minúsculas e sem acento.
+                    </div>
+                </div>
+
+                <div class="container__botoes">
+                    <div class="botao__criptografar">
+                        <div class="texto__criptografar" onclick="criptografarTexto()">Criptografar</div>
+                    </div>
+                    <div class="botao__descriptografar" >
+                        <div class="texto__descriptografar" onclick="descriptografarTexto()">Descriptografar</div>
+                </div>
+            </section>
+            </div>
+            <section class="textarea__resultado">
+
+                <div class="container__resultado">
+                    <img id="imagem__resultado" alt="" src="./images/chat-bot.png" >
+                    <div class="nenhuma__mensagem__encontrada" id="texto__nenhuma__mensagem">Nenhuma mensagem encontrada</div>
+                    
+                <div class="texto__resultado">               
+                    <label for="label__resultado">Texto criptografado</label><br> <!-- for tem que ser o mesmo id no textarea-->
+                    <textarea id="label__resultado" class="text__area__ajustado"  name="resultado" rows="5" cols="33" placeholder="Texto criptografado aqui"></textarea>
+                    <br>               
+                  <div class="botao__copiar">
+                        <div class="texto__copiarTexto"  onclick="copiarTexto()">Copiar</div>
+                        <!-- alert -->
+                        <div id="alerta__copiar" class="alerta"></div>               
+                    </div>
+                </div>       
+                </div>
+            </section>
+            <!-- Adicione um ID à frase -->
+            <div id="alerta__maiuscula" class="alerta"></div>
+        </main>
+
+        <footer class="roda__pe">
+            <p>Desenvolvido por suellen</p>     
+        </footer>
+        <script src="./script/script.js" defer></script>
+    </body>
+</html>
