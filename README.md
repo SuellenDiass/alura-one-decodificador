@@ -2,8 +2,10 @@
 <h1 align="center"> Criando um Decodificador de Texto com HTML, CSS e JavaScript </h1>
 
 <p align="center">
-    <img width="600" src="https://github-production-user-asset-6210df.s3.amazonaws.com/102911341/309880087-7662ff69-9b95-420b-b1a3-edb6d56522ef.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240304%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240304T194002Z&X-Amz-Expires=300&X-Amz-Signature=b014cce0c64765d6bf6920aaead12f165276686de4d1041e38c627dffb9a0454&X-Amz-SignedHeaders=host&actor_id=102911341&key_id=0&repo_id=711636292">
+    <img width="600" src="/images/imagem-do-site.png">
 
+<p align="center">Seja redirecionado à página do 
+<a href="https://extraordinary-hummingbird-2ec60f.netlify.app/" target="_blank">projeto</a></p>
 
 
 
